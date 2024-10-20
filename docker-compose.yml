@@ -1,11 +1,11 @@
-version: "3"
+version: '3'
 services:
   client:
-    image: "lmatayoshi/multi-client"
+    image: 'lmatayoshi/multi-client'
     mem_limit: 128m
     hostname: client
   server:
-    image: "lmatayoshi/multi-server"
+    image: 'lmatayoshi/multi-server'
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,15 +17,15 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: "lmatayoshi/multi-worker"
+    image: 'lmatayoshi/multi-worker'
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: "lmatayoshi/multi-nginx"
+    image: 'lmatayoshi/multi-nginx'
     mem_limit: 128m
     hostname: nginx
     ports:
-      - "80:80"
+      - '80:80'
