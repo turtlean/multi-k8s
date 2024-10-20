@@ -18,7 +18,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Finished and updated!!
+            Mirá Tigre 🐅. Una app hosteada en la nube para calcular Fibonacci!
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
